@@ -51,20 +51,20 @@ def get_response(msg):
     return "I do not understand..."
 
 
-def gtts_speech(response):
-    myobj = gTTS(text=response, lang=language, slow=False, tld='com.sg')
-    myobj.save("welcome.mp3")
-    os.system("mpg321 welcome.mp3")
+# def gtts_speech(response):
+#     myobj = gTTS(text=response, lang=language, slow=False, tld='com.sg')
+#     myobj.save("welcome.mp3")
+#     os.system("mpg321 welcome.mp3")
 
 
-if __name__ == "__main__":
-    print("Let's chat! (type 'quit' to exit)")
-    while True:
-        # sentence = "do you use credit cards?"
-        sentence = input("You: ")
-        if sentence == "quit":
-            break
+# if __name__ == "__main__":
+#     print("Let's chat! (type 'quit' to exit)")
+#     while True:
+#         # sentence = "do you use credit cards?"
+#         sentence = input("You: ")
+#         if sentence == "quit":
+#             break
 
-        resp = get_response(sentence)
-        gtts_speech(resp)
-        print(resp)
+#         resp = get_response(sentence)
+#         gtts_speech(resp)
+#         print(resp)
