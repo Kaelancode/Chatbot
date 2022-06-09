@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 
 from chat import get_response
+from pygame import mixer
 from gtts import gTTS
 import os
 
@@ -12,7 +13,10 @@ def gtts_speech(response):
     myobj = gTTS(text=response, lang=language, slow=True, tld='com.sg')
     myobj.save("welcome.mp3")
     #os.system("mpg321 welcome.mp3")
-    os.system("start welcome.mp3")
+    #os.system("start welcome.mp3")
+    mixer.music.load('welcome.mp3')# load the audio file
+    mixer.music.play()
+
 
 
 @app.route("/")
