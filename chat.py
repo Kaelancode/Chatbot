@@ -8,7 +8,7 @@ from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
 #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-device = 'cpu'
+#device = 'cpu'
 
 with open('intents.json', 'r') as json_data:
     intents = json.load(json_data)
@@ -24,7 +24,7 @@ all_words = data['all_words']
 tags = data['tags']
 model_state = data["model_state"]
 
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
+model = NeuralNet(input_size, hidden_size, output_size)
 model.load_state_dict(model_state)
 model.eval()
 
@@ -34,7 +34,7 @@ def get_response(msg):
     sentence = tokenize(msg)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
-    X = torch.from_numpy(X).to(device)
+    X = torch.from_numpy(X)
 
     output = model(X)
     _, predicted = torch.max(output, dim=1)
