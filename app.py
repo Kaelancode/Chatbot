@@ -11,7 +11,8 @@ language = 'en'
 def gtts_speech(response):
     myobj = gTTS(text=response, lang=language, slow=True, tld='com.sg')
     myobj.save("welcome.mp3")
-    os.system("mpg321 welcome.mp3")
+    #os.system("mpg321 welcome.mp3")
+    os.system("start welcome.mp3")
 
 
 @app.route("/")
