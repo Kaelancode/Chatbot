@@ -1,11 +1,12 @@
 import random
 import json
-from gtts import gTTS
-import os
 import torch
 
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+
+# from gtts import gTTS
+# import os
 
 #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 #device = 'cpu'
