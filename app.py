@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 
 from chat import get_response
-from gtts import gTTS
-import os
+#from gtts import gTTS
+#import os
 
 app = Flask(__name__)
 language = 'en'
@@ -25,7 +25,7 @@ def predict():
     # TODO: check if text is valid
     response = get_response(text)
     message = {"answer": response}
-    gtts_speech(response)
+    #gtts_speech(response)
     return jsonify(message)
 
 
