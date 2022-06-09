@@ -14,12 +14,12 @@ language = 'en'
 #     os.system("mpg321 welcome.mp3")
 
 
-@app.get("/")
+@app.route("/")
 def index_get():
     return render_template("base.html")
 
 
-@app.post("/predict")
+@app.route("/predict", methods=['POST'])
 def predict():
     text = request.get_json().get("message")
     # TODO: check if text is valid
