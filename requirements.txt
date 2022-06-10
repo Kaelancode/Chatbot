@@ -25,4 +25,5 @@ zipp==3.8.0
 gTTS==2.2.4
 pygame==2.1.2 
 mpyg321==2.0.1 
+wave
 gunicorn
