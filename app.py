@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, jsonify
 
 from chat import get_response
 from pygame import mixer
-import wave
 from gtts import gTTS
+import playsound
 import os
 
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def gtts_speech(response):
     #mixer.init()
     #mixer.music.load('welcome.mp3')# load the audio file
     #mixer.music.play()
-    w = wave.open("welcome.mp3","r")
+    playsound.playsound('welcome.mp3', True)
 
 
 
