@@ -4,6 +4,7 @@ from chat import get_response
 #from pygame import mixer
 from gtts import gTTS
 #import playsound
+import  vlc
 import os
 
 app = Flask(__name__)
@@ -14,13 +15,14 @@ def gtts_speech(response):
     myobj = gTTS(text=response, lang=language, slow=True, tld='com.sg')
     myobj.save("welcome.mp3")
     #os.system("mpg321 welcome.mp3")
-    os.system("welcome.mp3")
+    #os.system("welcome.mp3")
     #mixer.init()
     #mixer.music.load('welcome.mp3')# load the audio file
     #mixer.music.play()
     #playsound.playsound('welcome.mp3', True)
-
-
+    p = vlc.MediaPlayer("welcome.mp3")
+    p.play()
+    p.stop()
 
 @app.route("/")
 def index_get():
