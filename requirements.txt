@@ -26,4 +26,4 @@ gTTS==2.2.4
 transformers==4.11.3
 mpyg321
 gunicorn
-#pydub
+pydub
