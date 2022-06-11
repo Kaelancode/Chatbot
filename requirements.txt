@@ -27,3 +27,4 @@ pygame==2.1.2
 mpyg321==2.0.1
 playsound
 gunicorn
+pygobject
