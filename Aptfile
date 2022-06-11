@@ -3,4 +3,4 @@
 
 mpg321
 libao-dev
-vlc
+ffmpeg
