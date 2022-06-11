@@ -22,7 +22,7 @@ def gtts_speech(response):
     #mixer.music.load('welcome.mp3')# load the audio file
     #mixer.music.play()
     #playsound.playsound('welcome.mp3', True)
-    song = AudioSegment.from_mp3("./welcome.mp3")
+    song = AudioSegment.from_mp3("./welcome1.mp3")
     play(song)
 
 @app.route("/")
