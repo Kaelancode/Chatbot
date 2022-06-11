@@ -2,27 +2,27 @@ from flask import Flask, render_template, request, jsonify
 
 from chat import get_response
 #from pygame import mixer
-from gtts import gTTS
+#from gtts import gTTS
 #import playsound
-from pydub import AudioSegment
-from pydub.playback import play
+#from pydub import AudioSegment
+#from pydub.playback import play
 import os
 
 app = Flask(__name__)
 language = 'en'
 
 
-def gtts_speech(response):
-    myobj = gTTS(text=response, lang=language, slow=True, tld='com.sg')
-    myobj.save("welcome.mp3")
-    #os.system("mpg321 welcome.mp3")
-    #os.system("welcome.mp3")
-    #mixer.init()
-    #mixer.music.load('welcome.mp3')# load the audio file
-    #mixer.music.play()
-    #playsound.playsound('welcome.mp3', True)
-    song = AudioSegment.from_mp3("welcome.mp3")
-    play(song)
+# def gtts_speech(response):
+#     myobj = gTTS(text=response, lang=language, slow=True, tld='com.sg')
+#     myobj.save("welcome.mp3")
+#     #os.system("mpg321 welcome.mp3")
+#     #os.system("welcome.mp3")
+#     #mixer.init()
+#     #mixer.music.load('welcome.mp3')# load the audio file
+#     #mixer.music.play()
+#     #playsound.playsound('welcome.mp3', True)
+#     song = AudioSegment.from_mp3("welcome.mp3")
+#     play(song)
 
 @app.route("/")
 def index_get():
@@ -35,7 +35,7 @@ def predict():
     # TODO: check if text is valid
     response = get_response(text)
     message = {"answer": response}
-    gtts_speech(response)
+    #gtts_speech(response)
     return jsonify(message)
 
 
