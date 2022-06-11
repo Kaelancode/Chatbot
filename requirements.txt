@@ -24,6 +24,7 @@ Werkzeug==2.1.2
 zipp==3.8.0
 gTTS==2.2.4
 transformers==4.11.3
+ffmpeg-python
 mpyg321
 gunicorn
 pydub
