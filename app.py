@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify
 from chat import get_response
 from pygame import mixer
 from gtts import gTTS
-import playsound
+#import playsound
 import os
 
 app = Flask(__name__)
