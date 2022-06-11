@@ -13,7 +13,7 @@ language = 'en'
 def gtts_speech(response):
     myobj = gTTS(text=response, lang=language, slow=True, tld='com.sg')
     myobj.save("welcome.mp3")
-    os.system("mpg321 welcome.mp3")
+    #os.system("mpg321 welcome.mp3")
     os.system("welcome.mp3")
     #mixer.init()
     #mixer.music.load('welcome.mp3')# load the audio file
