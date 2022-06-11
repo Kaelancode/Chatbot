@@ -4,8 +4,8 @@ from chat import get_response
 #from pygame import mixer
 from gtts import gTTS
 #import playsound
-#from pydub import AudioSegment
-#from pydub.playback import play
+from pydub import AudioSegment
+from pydub.playback import play
 import os
 
 app = Flask(__name__)
@@ -15,15 +15,15 @@ language = 'en'
 def gtts_speech(response):
     myobj = gTTS(text=response, lang=language, slow=False, tld='com.sg')
     myobj.save("./welcome1.mp3")
-    os.system("mpg321 ./welcome.mp3")
+    #os.system("mpg321 ./welcome.mp3")
     #os.system("./welcome1.mp3")
-    os.remove("./welcome1.mp3")
+    #os.remove("./welcome1.mp3")
     #mixer.init()
     #mixer.music.load('welcome.mp3')# load the audio file
     #mixer.music.play()
     #playsound.playsound('welcome.mp3', True)
-    #song = AudioSegment.from_mp3("welcome.mp3")
-    #play(song)
+    song = AudioSegment.from_mp3("./welcome.mp3")
+    play(song)
 
 @app.route("/")
 def index_get():
