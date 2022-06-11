@@ -4,7 +4,8 @@ from chat import get_response
 #from pygame import mixer
 from gtts import gTTS
 #import playsound
-import  vlc
+from pydub import AudioSegment
+from pydub.playback import play
 import os
 
 app = Flask(__name__)
@@ -20,9 +21,8 @@ def gtts_speech(response):
     #mixer.music.load('welcome.mp3')# load the audio file
     #mixer.music.play()
     #playsound.playsound('welcome.mp3', True)
-    p = vlc.MediaPlayer("welcome.mp3")
-    p.play()
-    p.stop()
+    song = AudioSegment.from_mp3("welcome.mp3")
+    play(song)
 
 @app.route("/")
 def index_get():
