@@ -283,7 +283,8 @@
         "What are the techstack we get to work with",
         "What tools will we use?",
         "What stack we use for development?",
-        "What kind of tech stack will we work with?"
+        "What kind of tech stack will we work with?",
+        "techstack that i will get get expose to ?"
       ],
       "responses": [
         "Most of the projects done by the AIAP apprentices would be built in Python and using frameworks such as Tensorflow/Keras, PyTorch.<br><br><a href='https://aisingapore.org/kb/what-ai-tools-and-frameworks-would-the-apprentices-know/'>More on Techstack and framework</a>"
@@ -434,7 +435,11 @@
         "What will I learn from the programme",
         "What are the goals of the programme",
         "What skills will I acquire",
-        "What is the outcome of the course"
+        "What is the outcome of the course",
+        "What do i get to learn ?",
+        "What skillsets will i get to develop",
+        "What competencies will i developed?",
+        "Skills that i be equipped with at end of the course"
       ],
       "responses": [
         "Candidates should be equipped and be proficient in all or most of the following skills:<br><br>Data engineering<br>Model development<br>Software engineering<br>MLOps<br><br><a href='https://aisingapore.org/kb/what-is-the-outcome-of-this-programme/' target='_blank'>Training outcome</a>"
@@ -450,7 +455,11 @@
         "Can i quit the course if i am not satisfied with the outcome",
         "Can i leave the course halfway?",
         "What if i quit halfway through the course",
-        "What happens if i dropout of the course"
+        "What happens if i dropout of the course",
+        "Can i dropout of the course anytime",
+        "What if i want to leave the course",
+        "Can i leave in the middle of the course?",
+        "what if i drop out in mid of the course?"
       ],
       "responses": [
         "As AIAP is a fully sponsored programme, if you drop out of the programme, you will have to reimburse AI Singapore for the monthly training allowance that has been paid out to you and the programme fees."
@@ -468,7 +477,10 @@
         "AI positions that are suitable for me once i completed the course?",
         "What kind of jobs can i get",
         "who will hire me ?",
-        "What kind of roles can i look for?"
+        "What kind of roles can i look for?",
+        "what are the job type that i can search for",
+        "Job that i can apply for ?",
+        "Type of AI roles that i can be considered for?"
       ],
       "responses": [
         "AI job roles relevant may include AI Engineer, ML Engineer, AI Dev Ops, AI Developer or AI Consultant."
