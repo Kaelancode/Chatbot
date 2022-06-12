@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 
 from chat import get_response
-from gtts import gTTS
+#from gtts import gTTS
 #import playsound
 #from pygame import mixer
 #from pydub import AudioSegment
@@ -36,7 +36,7 @@ def predict():
     # TODO: check if text is valid
     response = get_response(text)
     message = {"answer": response}
-    gtts_speech(response)
+    #gtts_speech(response)
     return jsonify(message)
 
 
