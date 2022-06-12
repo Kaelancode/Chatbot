@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 
 from chat import get_response
-from pygame import mixer
 from gtts import gTTS
 #import playsound
+#from pygame import mixer
 #from pydub import AudioSegment
 #from pydub.playback import play
 import os
