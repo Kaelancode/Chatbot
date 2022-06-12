@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 
-from chatblend import get_response
+from chat import get_response
 from gtts import gTTS
 #import playsound
 #from pygame import mixer
