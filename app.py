@@ -19,7 +19,7 @@ def gtts_speech(response):
     #os.system("./welcome1.mp3")
     #os.remove("./welcome1.mp3")
     mixer.init()
-    mixer.music.load('welcome.mp3')# load the audio file
+    mixer.music.load('./welcome.mp3')# load the audio file
     mixer.music.play()
     #playsound.playsound('welcome.mp3', True)
     #song = AudioSegment.from_mp3("./welcome1.mp3")
