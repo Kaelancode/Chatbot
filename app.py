@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify
 from chat import get_response
 from pygame import mixer
 from gtts import gTTS
-import playsound
+#import playsound
 #from pydub import AudioSegment
 #from pydub.playback import play
 import os
@@ -14,14 +14,14 @@ language = 'en'
 
 def gtts_speech(response):
     myobj = gTTS(text=response, lang=language, slow=False, tld='com.sg')
-    myobj.save("./welcome2.mp3")
-    #os.system("mpg321 ./welcome.mp3")
+    myobj.save("./welcome1.mp3")
+    os.system("mpg321 ./welcome.mp3")
     #os.system("./welcome1.mp3")
-    #os.remove("./welcome1.mp3")
+    os.remove("./welcome1.mp3")
     #mixer.init()
     #mixer.music.load('./welcome.mp3')# load the audio file
     #mixer.music.play()
-    playsound.playsound('./welcome2.mp3', True)
+    #playsound.playsound('./welcome2.mp3', True)
     #song = AudioSegment.from_mp3("./welcome1.mp3")
     #play(song)
 
