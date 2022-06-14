@@ -2,4 +2,4 @@
 
 Batch 10 Team 3 Project
 
-Chatbot
+FAQ Chatbot
